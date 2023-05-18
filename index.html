@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
     </style>
 </head>
+
 <body>
     <header id="header">
-        <h1>Etch-A-Sketch</h1>
+        <h1>Calculator</h1>
     </header>
+    <main class="container">
+        <section class="calculator">
+            <div class="display">
+                <div id='input'>0</div>
+                <div id='result'></div>
+            </div>
+            <!--First Fours Buttons-->
+            <div class="keys">
+                <div class="first">
+                    <input type="button" value="AC" onclick="clearAll()" class="btn">
+                    <input type="button" value="DE" onclick="deleteLastNumber()" class="btn">
+                    <input type="button" value="%" onclick="updateValues(this.value)" class="btn">
+                    <input type="button" value="÷" onclick="updateValues(this.value)" class="btn">
+                </div>
+
+                <!--2nd Fours Buttons-->
+                <div class="second">
+                    <input type="button" value="7" onclick="updateValues(this.value)">
+                    <input type="button" value="8" onclick="updateValues(this.value)">
+                    <input type="button" value="9" onclick="updateValues(this.value)">
+                    <input type="button" value="×" onclick="updateValues(this.value)" class="btn">
+                </div>
+                <!--3rd Fours Buttons-->
+                <div class="third">
+                    <input type="button" value="4" onclick="updateValues(this.value)">
+                    <input type="button" value="5" onclick="updateValues(this.value)">
+                    <input type="button" value="6" onclick="updateValues(this.value)">
+                    <input type="button" value="−" onclick="updateValues(this.value)" class="btn">
+                </div>
+                <!--4th Fours Buttons-->
+                <div class="fourth">
+                    <input type="button" value="1" onclick="updateValues(this.value)">
+                    <input type="button" value="2" onclick="updateValues(this.value)">
+                    <input type="button" value="3" onclick="updateValues(this.value)">
+                    <input type="button" value="+" onclick="updateValues(this.value)" class="btn">
+                </div>
+                <!--last three Buttons-->
+                <div class="last">
+                    <input type="button" value="•" onclick="updateValues(this.value)" class="btn">
+                    <input type="button" value="0" onclick="updateValues(this.value)">
+                    <input type="button" value="=" onclick="updateValues(this.value)" class="btn">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h3>Project by Aswinth K</h3>
+    </footer>
+    <script src="index.js"></script>
 </body>
+
 </html>
